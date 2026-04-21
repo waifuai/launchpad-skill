@@ -39,21 +39,21 @@ footer { text-align: center; color: var(--text-muted); font-size: 0.8rem; paddin
 <h1>Launchpad Skill</h1>
 <p>Documentation hub for AI agents and developers</p>
 </header>
-# Launchpad Skill (`ls`)
+<h1>Launchpad Skill (`ls`)</h1>
 
 A modular Rust CLI designed for AI agents to manage tokenized companies on Solana. This tool provides a high-fidelity interface for corporate operations, integrating equity issuance, debt markets, and derivative trading with a social narrative layer.
 
-## 🚀 Overview
+<h2>🚀 Overview</h2>
 
 `launchpad-skill` implements a comprehensive "Company-as-a-Protocol" stack on Solana. It allows agents to not just trade tokens, but to operate the entire financial structure of a for-profit entity.
 
-### High-Fidelity Layers:
+<h3>High-Fidelity Layers:</h3>
 - **Equity**: Core SPL token issuance and liquidity management.
 - **Debt**: Dynamic bond markets where interest rates are driven by `reasoning-pricer` logic.
 - **Derivatives**: Native futures and leverage for sophisticated risk management.
 - **Narrative**: A "Company Narrative" feed powered by Solana Transaction Memos.
 
-## 🛠 Installation
+<h2>🛠 Installation</h2>
 
 ```bash
 # Clone the repository
@@ -67,11 +67,11 @@ cargo build --release
 ./target/release/ls --help
 ```
 
-## 📖 CLI Reference
+<h2>📖 CLI Reference</h2>
 
 The CLI is structured into four main subcommands: `equity`, `debt`, `trade`, and `feed`.
 
-### 1. Equity Management
+<h3>1. Equity Management</h3>
 Manage core company shares as SPL tokens.
 
 ```bash
@@ -85,7 +85,7 @@ ls equity swap --from ACME --to SOL --amount 100
 ls equity status --symbol ACME
 ```
 
-### 2. Debt Markets
+<h3>2. Debt Markets</h3>
 Issue and buy corporate bonds with dynamic yields.
 
 ```bash
@@ -99,7 +99,7 @@ ls debt buy-bond --symbol ACME --amount 1000
 ls debt yield --symbol ACME
 ```
 
-### 3. Derivatives & Trading
+<h3>3. Derivatives & Trading</h3>
 Open leveraged positions on company tokens.
 
 ```bash
@@ -113,7 +113,7 @@ ls trade short --symbol ACME --amount 200 --leverage 2.0
 ls trade liquidate --symbol ACME --user <USER_ADDRESS>
 ```
 
-### 4. Company Narrative (Feed)
+<h3>4. Company Narrative (Feed)</h3>
 View the "narrative" of a company based on on-chain memos.
 
 ```bash
@@ -121,7 +121,7 @@ View the "narrative" of a company based on on-chain memos.
 ls feed <COMPANY_ADDRESS>
 ```
 
-## 🤖 Agent Integration
+<h2>🤖 Agent Integration</h2>
 
 All commands support the `--json` flag to provide machine-readable output, making it easy for AI agents to parse results and make informed decisions.
 
@@ -129,7 +129,7 @@ All commands support the `--json` flag to provide machine-readable output, makin
 ls equity status --symbol ACME --json
 ```
 
-## 🏗 Architecture
+<h2>🏗 Architecture</h2>
 
 The project is structured modularly:
 - `src/equity/`: Token issuance and swap logic.
@@ -138,7 +138,7 @@ The project is structured modularly:
 - `src/feed/`: Memo parsing and narrative generation.
 - `src/pricing/`: Integration with risk-adjusted pricing models.
 
-## 📄 License
+<h2>📄 License</h2>
 
 This project is licensed under the MIT-0 License.
 
