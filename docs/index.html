@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>launchpad-skill Documentation</title>
+<style>
+
+:root {
+  --bg: #0d1117;
+  --card-bg: #161b22;
+  --border: #30363d;
+  --text: #e6edf3;
+  --text-muted: #8b949e;
+  --accent: #58a6ff;
+  --accent2: #7ee787;
+  --accent3: #d2a8ff;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 2rem; }
+.container { max-width: 1100px; margin: 0 auto; }
+header { text-align: center; margin-bottom: 3rem; padding: 2rem 0; border-bottom: 1px solid var(--border); }
+header h1 { font-size: 2.5rem; font-weight: 700; background: linear-gradient(135deg, var(--accent), var(--accent3)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 0.5rem; }
+header p { color: var(--text-muted); font-size: 1.1rem; }
+section { margin-bottom: 2.5rem; }
+h2 { font-size: 1.4rem; margin-bottom: 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid var(--border); display: flex; align-items: baseline; gap: 0.5rem; }
+.count { font-size: 0.85rem; color: var(--text-muted); font-weight: 400; }
+.section-desc { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; }
+.link-list { display: flex; flex-direction: column; gap: 0.25rem; }
+.link-list a { color: var(--accent); text-decoration: none; padding: 0.4rem 0.75rem; border-radius: 6px; transition: background 0.15s; font-size: 0.95rem; }
+.link-list a:hover { background: var(--card-bg); text-decoration: underline; }
+footer { text-align: center; color: var(--text-muted); font-size: 0.8rem; padding-top: 2rem; border-top: 1px solid var(--border); margin-top: 2rem; }
+
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1>Launchpad Skill</h1>
+<p>Documentation hub for AI agents and developers</p>
+</header>
+# Launchpad Skill (`ls`)
+
+A modular Rust CLI designed for AI agents to manage tokenized companies on Solana. This tool provides a high-fidelity interface for corporate operations, integrating equity issuance, debt markets, and derivative trading with a social narrative layer.
+
+## 🚀 Overview
+
+`launchpad-skill` implements a comprehensive "Company-as-a-Protocol" stack on Solana. It allows agents to not just trade tokens, but to operate the entire financial structure of a for-profit entity.
+
+### High-Fidelity Layers:
+- **Equity**: Core SPL token issuance and liquidity management.
+- **Debt**: Dynamic bond markets where interest rates are driven by `reasoning-pricer` logic.
+- **Derivatives**: Native futures and leverage for sophisticated risk management.
+- **Narrative**: A "Company Narrative" feed powered by Solana Transaction Memos.
+
+## 🛠 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-repo/launchpad-skill
+cd launchpad-skill
+
+# Build the project
+cargo build --release
+
+# The binary will be available at
+./target/release/ls --help
+```
+
+## 📖 CLI Reference
+
+The CLI is structured into four main subcommands: `equity`, `debt`, `trade`, and `feed`.
+
+### 1. Equity Management
+Manage core company shares as SPL tokens.
+
+```bash
+# Issue new equity tokens
+ls equity issue --name "Acme Corp" --symbol ACME --supply 1000000
+
+# Swap equity tokens in a pool
+ls equity swap --from ACME --to SOL --amount 100
+
+# Check status of equity pools
+ls equity status --symbol ACME
+```
+
+### 2. Debt Markets
+Issue and buy corporate bonds with dynamic yields.
+
+```bash
+# Issue corporate bonds
+ls debt issue-bond --symbol ACME --principal 50000
+
+# Buy bonds from the market
+ls debt buy-bond --symbol ACME --amount 1000
+
+# Check current bond yields
+ls debt yield --symbol ACME
+```
+
+### 3. Derivatives & Trading
+Open leveraged positions on company tokens.
+
+```bash
+# Open a long position (3x leverage)
+ls trade long --symbol ACME --amount 500 --leverage 3.0
+
+# Open a short position
+ls trade short --symbol ACME --amount 200 --leverage 2.0
+
+# Liquidate an underwater position
+ls trade liquidate --symbol ACME --user <USER_ADDRESS>
+```
+
+### 4. Company Narrative (Feed)
+View the "narrative" of a company based on on-chain memos.
+
+```bash
+# View transaction feed and company narrative
+ls feed <COMPANY_ADDRESS>
+```
+
+## 🤖 Agent Integration
+
+All commands support the `--json` flag to provide machine-readable output, making it easy for AI agents to parse results and make informed decisions.
+
+```bash
+ls equity status --symbol ACME --json
+```
+
+## 🏗 Architecture
+
+The project is structured modularly:
+- `src/equity/`: Token issuance and swap logic.
+- `src/debt/`: Bond market and interest rate calculations.
+- `src/trade/`: Futures and leverage engine.
+- `src/feed/`: Memo parsing and narrative generation.
+- `src/pricing/`: Integration with risk-adjusted pricing models.
+
+## 📄 License
+
+This project is licensed under the MIT-0 License.
+
+<section>
+  <h2>Documentation <span class="count">(1)</span></h2>
+  <p class="section-desc">Files in Documentation</p>
+  <div class="link-list">
+    <a href="SKILL.html">Launchpad Skill</a>
+  </div>
+</section>
+
+<footer>
+<p>Generated for GitHub Pages</p>
+</footer>
+</div>
+</body>
+</html>
