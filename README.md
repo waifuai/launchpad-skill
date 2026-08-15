@@ -1,6 +1,6 @@
 # Launchpad Skill (`ls`)
 
-A modular Rust CLI designed for AI agents to manage tokenized companies on Solana. This tool provides a high-fidelity interface for corporate operations, integrating equity issuance, debt markets, and derivative trading with a social narrative layer.
+A modular Python CLI designed for AI agents to manage tokenized companies on Solana. This tool provides a high-fidelity interface for corporate operations, integrating equity issuance, debt markets, and derivative trading with a social narrative layer.
 
 ## 🚀 Overview
 
@@ -19,11 +19,12 @@ A modular Rust CLI designed for AI agents to manage tokenized companies on Solan
 git clone https://github.com/your-repo/launchpad-skill
 cd launchpad-skill
 
-# Build the project
-cargo build --release
+# Install (registers the `ls` and `launchpad-skill` console scripts)
+pip install -e .
 
-# The binary will be available at
-./target/release/ls --help
+ls --help
+# or, without installing:
+python -m launchpad_skill.cli --help
 ```
 
 ## 📖 CLI Reference

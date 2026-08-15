@@ -1,6 +1,6 @@
 ---
 name: launchpad-skill
-description: A modular Rust CLI for managing tokenized companies on Solana, including equity, debt, and derivative layers. It integrates risk classification, pricing logic, and a transaction-memo social feed.
+description: A modular Python CLI for managing tokenized companies on Solana, including equity, debt, and derivative layers. It integrates risk classification, pricing logic, and a transaction-memo social feed.
 version: 0.1.0
 ---
 
